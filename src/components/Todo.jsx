@@ -45,7 +45,7 @@ function Todo({ id, children, check }) {
 						onClick={() => setCheckUpdate(!checkUpdate)}
 						className="w-8 aspect-square border border-zinc-400 cursor-pointer">
 						{check && (
-							<MdCheck className="w-8 h-8 text-zinc-700 cursor-pointer" />
+							<MdCheck className="w-8 h-8 text-zinc-700 dark:text-white cursor-pointer" />
 						)}
 					</div>
 					<input
@@ -57,8 +57,8 @@ function Todo({ id, children, check }) {
 						onChange={(e) => setInputUpdate(e.target.value)}
 						onBlur={() => setOnUpdate(false)}
 						onKeyPress={onKeyEnterWhenTypeInput}
-						className={`grow text-xl font-medium bg-white text-zinc-700 outline-none focus:border-b focus:border-b-zinc-400 md:text-xl ${
-							checkUpdate && 'line-through text-zinc-400'
+						className={`grow text-xl font-medium bg-white dark:bg-[#1E1E1E] text-zinc-700 dark:text-white outline-none focus:border-b focus:border-b-zinc-400 md:text-xl ${
+							checkUpdate && 'line-through text-zinc-400 dark:text-zinc-300'
 						}`}
 						disabled={!onUpdate}
 					/>
@@ -66,13 +66,13 @@ function Todo({ id, children, check }) {
 				<div className="flex items-center space-x-1">
 					<MdModeEdit
 						onClick={() => setOnUpdate(true)}
-						className={`w-8 h-8 text-zinc-700 cursor-pointer hover:text-blue-300 ${
+						className={`w-8 h-8 text-zinc-700 dark:text-white dark:hover:text-blue-300 cursor-pointer hover:text-blue-300 ${
 							onUpdate && 'text-blue-300'
 						}`}
 					/>
 					<MdDeleteForever
 						onClick={() => setOpenModalDelete(true)}
-						className="w-8 h-8 text-zinc-700 cursor-pointer hover:text-red-300"
+						className="w-8 h-8 text-zinc-700 dark:text-white dark:hover:text-red-300 cursor-pointer hover:text-red-300"
 					/>
 				</div>
 			</div>

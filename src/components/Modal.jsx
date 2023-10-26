@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 
 function Modal({ onDelete, onCancel }) {
 	return (
-		<div className="fixed -top-4 left-0 flex justify-center items-center bg-opacity-10 bg-black h-screen w-full border border-red-500">
-			<div className="bg-white p-10 rounded space-y-6">
-				<h3 className="md:text-xl">Are you want to delete this todo?</h3>
+		<div className="fixed -top-4 left-0 flex justify-center items-center bg-opacity-10 dark:bg-opacity-50 bg-black h-screen w-full">
+			<div className="bg-white dark:bg-[#1E1E1E] p-10 rounded space-y-6">
+				<h3 className="md:text-xl dark:text-white">
+					Are you want to delete this todo?
+				</h3>
 				<div className="flex justify-evenly">
 					<button
 						onClick={onDelete}
